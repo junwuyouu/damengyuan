@@ -1,32 +1,47 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <el-menu
+      :default-active="activeIndex"
+      class="el-menu-demo"
+      mode="horizontal"
+      @select="handleSelect"
+    >
+      <el-menu-item
+        v-for="(item, index) in menuData"
+        :key="index"
+        :index="index"
+        @click="checkMenu(item, index)"
+        >{{ item.menuName }}</el-menu-item
+      >
+    </el-menu>
+    <el-button>af</el-button>
+    <router-view />
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      activeIndex: 0,
+      menuData: [
+        { menuName: "Catalog", menuRouter: "/" },
+        { menuName: "Schedule", menuRouter: "/Schedule" },
+        { menuName: "Work", menuRouter: "/work" },
+      ],
+    };
+  },
+  components: {},
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    checkMenu(item, index) {
+      console.log(item, index);
+    },
+  },
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
