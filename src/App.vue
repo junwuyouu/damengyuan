@@ -14,7 +14,6 @@
         >{{ item.menuName }}</el-menu-item
       >
     </el-menu>
-    <el-button>af</el-button>
     <router-view />
   </div>
 </template>
@@ -39,9 +38,15 @@ export default {
     },
     checkMenu(item, index) {
       console.log(item, index);
+      this.$router.push({
+        path:`${item.menuRouter}`
+      })
     },
   },
 };
 </script>
 <style>
+.app{
+  padding: 12px;
+}
 </style>
