@@ -23,7 +23,7 @@ export default {
   name: "App",
   data() {
     return {
-      activeIndex: 0,
+      activeIndex: '0',
       menuData: [
         { menuName: "Catalog", menuRouter: "/" },
         { menuName: "Schedule", menuRouter: "/Schedule" },
@@ -37,7 +37,7 @@ export default {
       console.log(key, keyPath);
     },
     checkMenu(item, index) {
-      console.log(item, index);
+      console.log(this.$router,item, index);
       this.$router.push({
         path:`${item.menuRouter}`
       })
