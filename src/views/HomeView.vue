@@ -2,12 +2,13 @@
   <div class="about">
     <div class="head">
       <el-input
+        size="small"
         placeholder="Search Do not enter any CID"
         suffix-icon="el-icon-search"
-        style="width: 800px;"
+        style="width: 600px;"
         v-model="input1">  
       </el-input>
-      <el-button icon="el-icon-refresh">
+      <el-button size="small" style="margin-left: 10px; background-color:#615f5f; color: #fff;" icon="el-icon-refresh">
       </el-button>
     </div>
     <ag-grid-vue style="height: 400px; width: 100%;" class="m-agTableContent ag-theme-balham"

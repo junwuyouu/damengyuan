@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <span style="font-weight: 600;">ACQA Qrchestration</span>
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
@@ -27,7 +28,12 @@ export default {
       menuData: [
         { menuName: "Catalog", menuRouter: "/" },
         { menuName: "Schedule", menuRouter: "/Schedule" },
-        { menuName: "Work", menuRouter: "/work" },
+        { menuName: "Workflow Monitor", menuRouter: "/work" },
+        { menuName: "job Search", menuRouter: "/jsearch" },
+        { menuName: "job Summary", menuRouter: "/summary" },
+        { menuName: "jbo Stats", menuRouter: "/work" },
+        { menuName: "AuditTrail", menuRouter: "/work" },
+        { menuName: "Catalog Events", menuRouter: "/catalog" },
       ],
     };
   },
