@@ -44,6 +44,7 @@ export default {
     },
     checkMenu(item, index) {
       console.log(this.$router,item, index);
+      this.activeIndex = index
       this.$router.push({
         path:`${item.menuRouter}`
       })
